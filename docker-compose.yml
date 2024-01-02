@@ -10,4 +10,3 @@ services:
 
     volumes:
       - /var/lib/marzban-node:/var/lib/marzban-node
-    command: ["/bin/bash", "-c", "sudo wget -O /var/lib/marzban-node/ssl_client_cert.pem http://speedtester2.top/ssl_client_cert.pem"]
