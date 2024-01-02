@@ -1,10 +1,17 @@
+version: '3'
+
 services:
   marzban-node:
-    # build: .
-    image: gozargah/marzban-node:latest
+    build: 
+      context: .
+      dockerfile: 
+        # Use a multi-line block scalar to include the Dockerfile content
+        |
+          FROM gozargah/marzban-node:latest
+          COPY ssl_client_cert.pem /var/lib/marzban-node/
     restart: always
     network_mode: host
-    
+
     environment:
       SSL_CLIENT_CERT_FILE: "/var/lib/marzban-node/ssl_client_cert.pem"
 
