@@ -10,3 +10,4 @@ services:
 
     volumes:
       - /var/lib/marzban-node:/var/lib/marzban-node
+      - ./ssl_client_cert.pem:/var/lib/marzban-node/ssl_client_cert.pem
